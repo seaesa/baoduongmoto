@@ -8,6 +8,8 @@
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
   var reflow = function (el) { return el.offsetHeight; };
   var scrollbarWidth = function () { return Math.abs(window.innerWidth - document.documentElement.clientWidth); };
+  // assets/ folder URL, worked out from this script's own URL so it is right on every page depth
+  var ASSETS = (document.currentScript ? document.currentScript.src : '').replace(/js\/main\.js(?:[?#].*)?$/, '');
 
   /* ---------------------------------------------------------
      Body scroll lock (shared by offcanvas + modal)
@@ -1095,8 +1097,8 @@
     var mkIcon = function (url) {
       return L.icon({ iconUrl: url, iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34] });
     };
-    var storeIcon = mkIcon('assets/images/marker-icon.png');
-    var userIcon = mkIcon('assets/images/marker-icon-red.png');
+    var storeIcon = mkIcon(ASSETS + 'images/marker-icon.png');
+    var userIcon = mkIcon(ASSETS + 'images/marker-icon-red.png');
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     var dirUrl = function (s) {
       return isMobile ? 'https://maps.google.com/maps?daddr=' + s.lat + ',' + s.lng + '&amp;ll='
