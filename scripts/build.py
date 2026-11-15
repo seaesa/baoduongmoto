@@ -169,6 +169,16 @@ def hero_form():
     return HOME_BODY[i:j]
 
 # ------------------------------------------------------------------ page writer
+# Brand name: "E-Moto" -> "Bảo Dương moto". Only whole words that are not part of a URL or file name
+# (slugs are lower-case "e-moto"; the one image file name has "_E-Moto", which the look-behind skips).
+BRAND, BRAND_UP = 'Bảo Dương moto', 'BẢO DƯƠNG MOTO'
+_BRAND_RE = re.compile(r'(?<![\w/.\-])(E-MOTO|E-Moto)(?:\.vn)?(?![\w\-])')
+
+
+def brand(text):
+    return _BRAND_RE.sub(lambda m: BRAND_UP if m.group(1) == 'E-MOTO' else BRAND, text)
+
+
 def write(path, title, desc, kw, body, page, P, leaflet=False, extra_js=''):
     head = (PART['head'].replace('{{TITLE}}', esc(title)).replace('{{DESC}}', esc(desc)).replace('{{KEYWORDS}}', esc(kw))
             .replace('{{LEAFLET_CSS}}', LEAFLET_CSS if leaflet else ''))
@@ -177,6 +187,7 @@ def write(path, title, desc, kw, body, page, P, leaflet=False, extra_js=''):
     doc = (head + f'<body data-page="{page}">\n' + header + body + footer +
            (LEAFLET_JS if leaflet else '') + f'  <script src="{P}assets/js/main.js"></script>\n' + extra_js + '</body>\n</html>\n')
     doc = doc.replace('{{HOME}}', P or './').replace('{{SELF}}', './').replace('{{P}}', P).replace('@@', P)
+    doc = brand(doc)
     out = ROOT / urllib.parse.unquote(path) / 'index.html' if path else ROOT / 'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(doc, encoding='utf-8')

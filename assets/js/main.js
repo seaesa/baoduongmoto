@@ -1082,12 +1082,12 @@
   var mapEl = $('#map');
   if (mapEl && window.L) {
     var stores = [
-      { name: 'E-Moto 1', address: '307/2A Phan Châu Trinh, phường Hải Châu, Đà Nẵng', lat: 16.058949327953595, lng: 108.21931193870738, phone: '0911003600', openingHours: 'Time open: 8:00 - 20:00' },
-      { name: 'E-Moto 2', address: '14 Mai Dị, phường Hoà Cường, Đà Nẵng', lat: 16.045098555613848, lng: 108.21815760516326, phone: '0914002002', openingHours: 'Time open: 8:00 - 22:00' },
-      { name: 'E-Moto 3', address: '111 Lê Thanh Nghị, phường Hoà Cường, Đà Nẵng', lat: 16.039702870723545, lng: 108.21812938917952, phone: '0914002002', openingHours: 'Time open: 8:00 - 22:00' },
-      { name: 'E-Moto 4', address: '122 Phan Trọng Tuệ, phường Hoà Cường, Đà Nẵng', lat: 16.032874848697404, lng: 108.21909583570616, phone: '0914353353', openingHours: 'Time open: 8:00 - 20:00' },
-      { name: 'E-Moto 5', address: '74 Đỗ Pháp Thuận, phường Hòa Cường, Đà Nẵng, Việt Nam', lat: 16.0360788828839, lng: 108.2329926730184, phone: '0911002327', openingHours: 'Time open: 8:00 - 22:00' },
-      { name: 'E-Moto 6', address: '17 Hà Văn Tính, phường Hoà Khánh, Đà Nẵng, Việt Nam', lat: 16.068436438721506, lng: 108.15412137116448, phone: '0988429777', openingHours: 'Time open: 8:00 - 22:00' }
+      { name: 'Bảo Dương moto 1', address: '307/2A Phan Châu Trinh, phường Hải Châu, Đà Nẵng', lat: 16.058949327953595, lng: 108.21931193870738, phone: '0911003600', openingHours: 'Time open: 8:00 - 20:00' },
+      { name: 'Bảo Dương moto 2', address: '14 Mai Dị, phường Hoà Cường, Đà Nẵng', lat: 16.045098555613848, lng: 108.21815760516326, phone: '0914002002', openingHours: 'Time open: 8:00 - 22:00' },
+      { name: 'Bảo Dương moto 3', address: '111 Lê Thanh Nghị, phường Hoà Cường, Đà Nẵng', lat: 16.039702870723545, lng: 108.21812938917952, phone: '0914002002', openingHours: 'Time open: 8:00 - 22:00' },
+      { name: 'Bảo Dương moto 4', address: '122 Phan Trọng Tuệ, phường Hoà Cường, Đà Nẵng', lat: 16.032874848697404, lng: 108.21909583570616, phone: '0914353353', openingHours: 'Time open: 8:00 - 20:00' },
+      { name: 'Bảo Dương moto 5', address: '74 Đỗ Pháp Thuận, phường Hòa Cường, Đà Nẵng, Việt Nam', lat: 16.0360788828839, lng: 108.2329926730184, phone: '0911002327', openingHours: 'Time open: 8:00 - 22:00' },
+      { name: 'Bảo Dương moto 6', address: '17 Hà Văn Tính, phường Hoà Khánh, Đà Nẵng, Việt Nam', lat: 16.068436438721506, lng: 108.15412137116448, phone: '0988429777', openingHours: 'Time open: 8:00 - 22:00' }
     ];
     var map = L.map('map').setView([16.077043934064385, 108.22278964587527], 15);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
