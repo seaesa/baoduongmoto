@@ -40,6 +40,23 @@ video{object-fit:cover;height:100vh;width:100%;top:0;left:0}
   .nav-right>.nav-item>.nav-link{padding-top:1.7rem!important;padding-bottom:1.7rem!important}
   .navbar-nav>.nav-item>.nav-link{color:#fff;padding-top:2rem;padding-bottom:2rem}
   .navbar-nav>.nav-item>.nav-link:hover{color:#e5e5e5!important}
+  .navbar-nav .nav-link{white-space:nowrap}
+}
+/* compact desktop navbar: below 1400 the original's fixed paddings make the menu wrap */
+@media (min-width:992px) and (max-width:1399.98px){
+  .navbar-brand.mx-lg-5{margin-left:1.5rem!important;margin-right:1.5rem!important}
+  .navbar-nav.mx-auto>.nav-item>.nav-link{padding-left:.75rem!important;padding-right:.75rem!important}
+  .nav-right>.nav-item>.nav-link[hreflang]{display:none}
+  .nav-right>.nav-item>.nav-link.h5{font-size:1.1rem;padding:2rem 1rem!important}
+  .nav-right>.nav-item>.nav-link.h5 .me-3{margin-right:.5rem!important}
+  .nav-right>.nav-item>.nav-link.h4{padding-left:1.75rem!important;padding-right:1.75rem!important}
+}
+@media (min-width:992px) and (max-width:1199.98px){
+  .navbar-brand.mx-lg-5{margin-left:1rem!important;margin-right:1rem!important}
+  .navbar-brand .logo{height:2.5rem}
+  .navbar-nav.mx-auto>.nav-item>.nav-link{padding-left:.5rem!important;padding-right:.5rem!important;font-size:.95rem}
+  .nav-right>.nav-item>.nav-link.h5{font-size:1rem;padding:2rem .75rem!important}
+  .nav-right>.nav-item>.nav-link.h4{padding-left:1.25rem!important;padding-right:1.25rem!important}
 }
 @media (max-width:767.98px){
   body{font-family:'Roboto',sans-serif;font-size:1rem}

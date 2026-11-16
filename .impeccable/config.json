@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "roboto",
+        "createdAt": "2026-11-15T16:42:24.107Z",
+        "reason": "user asked for a 100% faithful clone of e-moto.vn, whose only web font is Roboto (verified from the original's Google Fonts link)"
+      }
+    ]
+  }
+}

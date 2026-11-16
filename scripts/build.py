@@ -391,8 +391,6 @@ for nw in D['news']:
 
 # ---- stores / contact
 path = 'cua-hang-emoto-electric-motorbike-rental'; P = prefix(path)
-i = HOME_BODY.index('<div class="g-recaptcha">'); j = HOME_BODY.index('</div>\n            </div>', i)
-recaptcha = HOME_BODY[i:j] + '</div>'
 def field(icon, ph, name, typ='text', req=True, fid=''):
     fb = f'\n              <div class="invalid-feedback">{ph}</div>' if req else ''
     return f'''            <div class="input-group mb-3">
@@ -411,13 +409,10 @@ body = hero(H['cua-hang-hero'], P) + f'''  <div class="container">
       </div>
       <div class="col-lg-6">
         <form method="POST" action="#" accept-charset="UTF-8" class="needs-validation" novalidate>
-{field("far fa-file", "Vui lòng nhập tiêu đề", "title", fid="Title")}{field("far fa-user", "Vui lòng nhập họ tên", "name", fid="Name")}{field("far fa-envelope", "Vui lòng nhập email", "email", "email", fid="Email")}{field("fas fa-road", "Vui lòng nhập địa chỉ", "address", req=False, fid="Address")}{field("fas fa-mobile-alt", "Vui lòng nhập số điện thoại", "phone", req=False, fid="Phone")}            <div class="input-group mb-3">
+{field("far fa-file", "Vui lòng nhập tiêu đề", "title", fid="Title")}{field("far fa-user", "Vui lòng nhập họ tên", "name", fid="Name")}{field("fas fa-road", "Vui lòng nhập địa chỉ", "address", req=False, fid="Address")}{field("fas fa-mobile-alt", "Vui lòng nhập số điện thoại", "phone", fid="Phone")}            <div class="input-group mb-3">
               <span class="input-group-text"><i class="far fa-comment-alt"></i></span>
               <textarea name="content" class="form-control" id="validationCustomContent" placeholder="Vui lòng nhập nội dung" rows="7" required></textarea>
               <div class="invalid-feedback">Vui lòng nhập nội dung</div>
-            </div>
-            <div class="input-group mb-4">
-              {recaptcha}
             </div>
             <div class="mb-0">
               <button type="submit" class="btn btn-danger btn-lg px-4"><i class="far fa-paper-plane"></i> Gửi Liên Hệ</button>

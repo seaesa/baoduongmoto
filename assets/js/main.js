@@ -181,26 +181,7 @@
       e.preventDefault();
       form.reset();
       form.classList.remove('was-validated');
-      $$('.rc-box', form).forEach(function (b) { b.classList.remove('rc-checked', 'rc-loading'); });
-      $$('.rc-check', form).forEach(function (c) { c.setAttribute('aria-checked', 'false'); });
     }, false);
-  });
-
-  /* ---------------------------------------------------------
-     reCAPTCHA lookalike checkbox
-     --------------------------------------------------------- */
-  $$('.rc-check').forEach(function (box) {
-    function tick() {
-      if (box.classList.contains('checked') || box.classList.contains('loading')) return;
-      box.classList.add('loading');
-      setTimeout(function () {
-        box.classList.remove('loading');
-        box.classList.add('checked');
-        box.setAttribute('aria-checked', 'true');
-      }, 700);
-    }
-    box.addEventListener('click', tick);
-    box.addEventListener('keydown', function (e) { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); tick(); } });
   });
 
   /* ---------------------------------------------------------

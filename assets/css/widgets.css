@@ -85,20 +85,6 @@ body.lb-open{overflow:hidden}
 .owl-carousel.owl-grabbing{cursor:grabbing}
 
 /* ---------- reCAPTCHA lookalike (real widget needs the site key/domain) ---------- */
-.g-recaptcha{display:inline-block;overflow:hidden}
-.rc-box{position:relative;width:304px;height:78px;background:#f9f9f9;border:1px solid #d3d3d3;border-radius:3px;box-shadow:0 0 4px 1px rgba(0,0,0,.08);display:flex;align-items:center;font-family:Roboto,helvetica,arial,sans-serif;color:#000;text-align:left}
-.rc-check{width:28px;height:28px;margin:0 12px 0 12px;flex-shrink:0;background:#fff;border:2px solid #c1c1c1;border-radius:2px;cursor:pointer;position:relative;transition:border-color .2s}
-.rc-check:hover{border-color:#b2b2b2;box-shadow:inset 0 1px 1px rgba(0,0,0,.1)}
-.rc-check.loading{border:4px solid #4a90e2;border-right-color:transparent;border-radius:50%;animation:rcSpin .8s linear infinite}
-.rc-check.checked{border-color:transparent;background:transparent}
-.rc-check.checked:after{content:'';position:absolute;left:7px;top:-4px;width:11px;height:24px;border:solid #009e55;border-width:0 4px 4px 0;transform:rotate(40deg)}
-@keyframes rcSpin{to{transform:rotate(360deg)}}
-.rc-label{font-size:14px;flex:1}
-.rc-logo{width:70px;margin-right:8px;display:flex;flex-direction:column;align-items:center;color:#555}
-.rc-logo-img{width:32px;height:32px;background:conic-gradient(#1c3aa9 0 25%,#4285f4 0 50%,#ababab 0 75%,#1c3aa9 0);border-radius:50%;-webkit-mask:radial-gradient(circle,transparent 6px,#000 7px);mask:radial-gradient(circle,transparent 6px,#000 7px)}
-.rc-brand{font-size:10px;margin-top:2px}
-.rc-links{font-size:8px}
-.g-recaptcha.is-invalid .rc-box{border-color:#dc3545}
 .lb-progress{position:absolute;top:0;left:0;right:0;z-index:30;height:3px;background:rgba(34,213,233,.96);transform:scaleX(0);transform-origin:0;user-select:none;pointer-events:none}
 
 /* owl theme controls (owl.theme.default + site overrides) */
